@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: none; /* removes default focus outline for cleaner look. */
+}
+
+body {
+  background: linear-gradient(135deg, #ffd700, #ff4500);
+  height: 100vh; /* ensure page takes full viewport height. */
+
+
+}
+
+input {
+  flex: 1;
+  font-size: 16px; /* sets font size for better readability. */ 
+}
+
+.search-container {
+  /* center container both horizontally and vertically */ 
+  width: 200px;
+  background: linear-gradient(to right, rgb(255, 192, 31), rgb(255, 149, 0)); /* makes color of search container different to show contrast. */
+  margin: 45vh auto 0; /* centers container both horizontally and vetically. */ 
+}
+
+
+/* style for both input field and suggestions list within search container */
+.search-container input,
+.search-container .suggestions {
+  display: block; /* ensure elements are aligned correctly. */
+  margin-top: 10px /* add margin to create space between input and suggestions. */
+}
+
+/* styling for the input field within the search container */
+.search-container input {
+  padding: 10px; /* add padding inside of input field. */ 
+  border-radius: 5px; /* creates a border radius of 5px around the input */ 
+  border: 2px solid #333;
+  background-color: #fff;
+  max-width: 300px;
+  width: 100%; /* ensure input field takes full width of container. */
+}
+
+/* styling for the suggestions dropdown within the search container */
+.search-container .suggestions {
+  text-align: left; /* center-align the suggestions list */ 
+  margin-top: 10px;
+  /* stops suggestions from overflowing on the y-axis and sets max-height of suggestions list. */
+  max-height: 512px;
+  overflow-y: hidden;
+
+}
+
+/* styling for undorered list */
+ul {
+  list-style: none; /* removes default list-styling. */
+  /* remove default padding and margin */
+  padding: 0;
+  margin: 0;
+  max-width: 300px;
+}
+
+
+/* styling for each li item. */
+ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer; /* sets a cursore to show clickable items. */
+}
+
+/* highlights suggested items when hovered over. */
+ul li:hover {
+  background-color: #fff;
+}
